@@ -60,12 +60,14 @@ async def autopilot():
             LOGS.info(
                 "Anda Berada di Terlalu Banyak Saluran & Grup, Tinggalkan Beberapa Dan Mulai Ulang Bot"
             )
-            sys.exit(1)
+           
+            sys.exit()
         except BaseException as er:
             LOGS.info(er)
             LOGS.info(
                 "Ada yang Salah, Buat Grup dan atur id-nya di config var LOG_CHANNEL."
             )
+         
             sys.exit(1)
         chat = r.chats[0]
         channel = get_peer_id(chat)
@@ -110,7 +112,7 @@ async def autobot():
         LOGS.info(
             "Silakan buat Bot dari @BotFather dan tambahkan tokennya di var BOT_TOKEN"
         )
-        sys.exit(1)
+        sys.exit
     await bot.send_message(bf, name)
     await asyncio.sleep(1)
     isdone = (await bot.get_messages(bf, limit=1))[0].text
