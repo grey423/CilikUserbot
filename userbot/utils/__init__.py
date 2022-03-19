@@ -40,4 +40,4 @@ from .tools import (
     take_screen_shot,
     time_formatter,
 )
-from .utils import autobot, load_module, remove_plugin, start_assistant
+from .utils import autopilot, autobot, load_module, remove_plugin, start_assistant
