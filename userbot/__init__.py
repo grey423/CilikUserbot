@@ -339,14 +339,6 @@ except Exception as e:
     sys.exit()
 
 
-async def check_botlog_chatid() -> None:
-    if not BOTLOG_CHATID and BOTLOG:
-        LOGS.warning(
-            "var BOTLOG_CHATID kamu belum di isi. Buatlah grup telegram dan masukan bot @MissRose_bot lalu ketik /id Masukan id grup nya di var BOTLOG_CHATID"
-        )
-        sys.exit(1)
-
-
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
