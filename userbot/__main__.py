@@ -21,7 +21,7 @@ from userbot import CMD_HANDLER as cmd
 from userbot import LOGS, bot, call_py
 from userbot.modules import ALL_MODULES
 from userbot.modules.misc import branch
-from userbot.utils import autobot, checking, waiting
+from userbot.utils import autobot, autopilot, checking, waiting
 
 try:
     bot.start()
@@ -78,6 +78,8 @@ bot.loop.run_until_complete(checking())
 bot.loop.run_until_complete(cilik_userbot_on())
 if not BOT_TOKEN:
     bot.loop.run_until_complete(autobot())
+if not BOTLOG_CHATID:
+    bot.loop.run_until_complete(autopilot())
 idle()
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
